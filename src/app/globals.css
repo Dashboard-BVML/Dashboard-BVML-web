@@ -2,20 +2,188 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/***************************************/
+/* Styles pour la mise en page globale */
+/***************************************/
+
+main{
+  @apply mx-auto min-h-screen;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+section{
+  @apply px-2;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+
+/*******************************************/
+/* Styles pour les titres et autres textes */
+/*******************************************/
+
+
+.heading1 {
+  @apply text-3xl;   /* Taille par défaut, bien pour la lisibilité de base */
+  @apply sm:text-4xl;  /* Légère augmentation sur tablettes petites */
+  @apply md:text-5xl;  /* Taille confortable pour les tablettes typiques */
+  @apply lg:text-6xl; /* Plus visible sur les petits laptops */
+  @apply xl:text-6xl; /* Impactant sur les écrans larges */
+  @apply 2xl:text-6xl; /* Très grand pour les grands écrans */
+  @apply pt-20;       /* Espacement conséquent pour aérer le design */
+  @apply mb-12;
+  @apply text-center;
+  font-family: "LinikSans-Medium", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.1;
+
+}
+
+.heading2 {
+  @apply text-2xl;   /* Taille par défaut, bien pour la lisibilité de base */
+  @apply sm:text-3xl;  /* Légère augmentation sur tablettes petites */
+  @apply md:text-4xl;  /* Taille confortable pour les tablettes typiques */
+  @apply lg:text-5xl; /* Plus visible sur les petits laptops */
+  @apply xl:text-5xl; /* Impactant sur les écrans larges */
+  @apply 2xl:text-5xl; /* Très grand pour les grands écrans */
+  @apply my-10;
+  @apply text-center;
+  font-family: "LinikSans-Medium", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.1;
+}
+
+.heading3 {
+  @apply text-xl;   /* Taille par défaut, bien pour la lisibilité de base */
+  @apply sm:text-2xl;  /* Légère augmentation sur tablettes petites */
+  @apply md:text-3xl;  /* Taille confortable pour les tablettes typiques */
+  @apply lg:text-4xl; /* Plus visible sur les petits laptops */
+  @apply xl:text-5xl; /* Impactant sur les écrans larges */
+  @apply 2xl:text-6xl; /* Très grand pour les grands écrans */
+  @apply text-center;
+}
+
+.heading4 {
+  @apply text-lg;   /* Taille par défaut, bien pour la lisibilité de base */
+  @apply sm:text-xl;  /* Légère augmentation sur tablettes petites */
+  @apply md:text-2xl;  /* Taille confortable pour les tablettes typiques */
+  @apply lg:text-3xl; /* Plus visible sur les petits laptops */
+  @apply xl:text-4xl; /* Impactant sur les écrans larges */
+  @apply 2xl:text-5xl; /* Très grand pour les grands écrans */
+  @apply my-6;
+  @apply text-center;
+  font-family: "LinikSans-Medium", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.heading5 {
+  @apply text-lg;   /* Taille par défaut, bien pour la lisibilité de base */
+  @apply sm:text-xl;  /* Légère augmentation sur tablettes petites */
+  @apply md:text-2xl;  /* Taille confortable pour les tablettes typiques */
+  @apply lg:text-3xl; /* Plus visible sur les petits laptops */
+  @apply xl:text-4xl; /* Impactant sur les écrans larges */
+  @apply 2xl:text-5xl; /* Très grand pour les grands écrans */
+  @apply my-6;
+  @apply text-center;
+  font-family: "LinikSans-Medium", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.heading6 {
+  @apply text-lg;   /* Taille par défaut, bien pour la lisibilité de base */
+  @apply sm:text-xl;  /* Légère augmentation sur tablettes petites */
+  @apply md:text-2xl;  /* Taille confortable pour les tablettes typiques */
+  @apply lg:text-3xl; /* Plus visible sur les petits laptops */
+  @apply xl:text-4xl; /* Impactant sur les écrans larges */
+  @apply 2xl:text-5xl; /* Très grand pour les grands écrans */
+  @apply my-6;
+  @apply text-center;
+  font-family: "LinikSans-Medium", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  @apply text-base;   /* Taille par défaut, bien pour la lisibilité de base */
+  @apply md:text-lg;  /* Taille confortable pour les tablettes typiques */
+  @apply my-5;
+  @apply leading-relaxed;
+  @apply tracking-wide
+}
+a {
+  @apply text-base;   /* Taille par défaut, bien pour la lisibilité de base */
+  @apply md:text-lg;  /* Taille confortable pour les tablettes typiques */
+}
+
+/**************************************/
+/* Styles pour le générateur de texte */
+/**************************************/
+
+
+.Tiptap {
+  @apply max-w-full overflow-x-hidden;
+}
+.Tiptap h1{
+  @apply text-6xl font-bold my-10;
+}
+.Tiptap h2{
+  @apply text-5xl font-bold my-10;
+}
+.Tiptap h3{
+  @apply text-4xl font-bold my-10;
+}
+.Tiptap h4{
+  @apply text-3xl font-bold my-10;
+}
+.Tiptap h5{
+  @apply text-2xl font-bold my-10;
+}
+.Tiptap h6{
+  @apply text-xl font-bold my-10;
+}
+.Tiptap p{
+  @apply text-xl my-4;
+}
+.Tiptap a{
+  @apply text-xl text-blue-500;
+}
+.Tiptap blockquote{
+  @apply text-xl bg-gray-200 rounded px-4 py-1 my-4 w-fit border-l-4 border-gray-400;
+}
+.Tiptap ul li{
+  @apply text-xl list-disc ms-10;
+}
+.Tiptap ol li{
+  @apply text-xl list-decimal ms-10;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+.Tiptap th,
+.Tiptap td {
+    position: relative;
+}
+
+.Tiptap .resize-handle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px; /* Largeur de la zone cliquable pour le redimensionnement */
+    cursor: col-resize !important;
+    background-color: transparent; /* Mettre un fond si tu veux le rendre visible */
 }
